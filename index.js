@@ -112,6 +112,48 @@ const deleteTour = (req, res) => {
   );
 };
 
+//==============================================================================
+
+const getAllUsers = (req, res) => {
+  res.status(500).json({
+    status: 'failed',
+    message: 'this route is not yet defined',
+  });
+};
+const addUser = (req, res) => {
+  res.status(500).json({
+    status: 'failed',
+    message: 'this route is not yet defined',
+  });
+};
+const getUserById = (req, res) => {
+  res.status(500).json({
+    status: 'failed',
+    message: 'this route is not yet defined',
+  });
+};
+const updateUser = (req, res) => {
+  res.status(500).json({
+    status: 'failed',
+    message: 'this route is not yet defined',
+  });
+};
+const deleteUser = (req, res) => {
+  res.status(500).json({
+    status: 'failed',
+    message: 'this route is not yet defined',
+  });
+};
+
+//==============================================================================
+
+app.route('/api/v1/users').get(getAllUsers).post(addUser);
+app
+  .route('/api/v1/user/:id')
+  .get(getUserById)
+  .patch(updateUser)
+  .delete(deleteUser);
+
 app.route('/api/v1/tours').get(getAllTours).post(addTour);
 app
   .route('/api/v1/tours/:id')
